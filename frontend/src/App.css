@@ -23,7 +23,14 @@ body {
   color: #fff;
   font-family: 'Outfit', sans-serif;
   overflow-x: hidden;
+  width: 100%;
+  position: relative;
   cursor: crosshair;
+}
+
+html {
+  overflow-x: hidden;
+  width: 100%;
 }
 
 /* Custom Cursor */
@@ -623,12 +630,21 @@ footer {
 }
 
 @media (max-width: 768px) {
-  .container { padding: 0 1.5rem; }
-  .title-row h1 { font-size: 2.8rem; letter-spacing: 0; }
+  .container { padding: 0 1.2rem; }
+  .title-row h1 { font-size: clamp(2.5rem, 10vw, 3rem); letter-spacing: 0; }
   .large-p { font-size: 1.1rem; margin-bottom: 2rem; }
   .section-title { font-size: 2rem; margin-bottom: 2.5rem; }
   .image-frame-pure::before { width: 100%; height: 100%; filter: blur(40px); opacity: 0.5; }
   .skill-card-solid { padding: 2rem; }
   .skill-card-solid h3 { font-size: 1.5rem; }
   .hero-quote { font-size: 1.2rem; padding: 1.5rem; }
+}
+
+@media (max-width: 480px) {
+  .title-row h1 { font-size: 2.2rem; }
+  .subtitle { font-size: 1.2rem; }
+  .btn-primary { padding: 1rem 2rem; font-size: 0.8rem; }
+  .nav-links { gap: 1.5rem; }
+  .social-icon { width: 45px; height: 45px; }
+  .section-clean { padding: 60px 0; }
 }

@@ -163,9 +163,27 @@
   }
   .neofetch-ascii {
     font-size: 0.7rem;
+    overflow-x: auto;
+    width: 100%;
   }
   .terminal-body {
     padding: 1rem;
     font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .neofetch-ascii {
+    font-size: 1.8vw;
+    line-height: 1;
+  }
+  .terminal-container {
+    margin: 1.5rem 0;
+  }
+  .info-title {
+    font-size: 1rem;
+  }
+  .info-key {
+    min-width: 70px;
   }
 }
