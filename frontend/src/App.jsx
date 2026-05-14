@@ -3,6 +3,7 @@ import './App.css';
 import heroImg from './assets/hero.png';
 import TopMusicPlayer from './components/TopMusicPlayer';
 import SystemTerminal from './components/SystemTerminal';
+import Zh3nPage from './components/Zh3nPage';
 
 import {
   FaPython, FaJava, FaHtml5, FaCss3Alt, FaNodeJs, FaPhp, FaLinux,
@@ -42,6 +43,11 @@ const getIconForSkill = (skill) => {
 };
 
 function App() {
+  // Hidden route: /zh3n
+  if (window.location.pathname === '/zh3n') {
+    return <Zh3nPage />;
+  }
+
   const [data, setData] = useState(null);
   const [loading, setLoading] = useState(true);
   const [isDragging, setIsDragging] = useState(false);
@@ -224,6 +230,8 @@ function App() {
                 <cite>— {data.quote.author}</cite>
               </blockquote>
             )}
+
+
           </div>
         </div>
       </section>

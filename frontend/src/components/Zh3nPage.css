@@ -1,0 +1,58 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400&display=swap');
+
+.zh3n-root {
+  min-height: 100vh;
+  background: #050505;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Inter', sans-serif;
+  position: relative;
+  padding: 2rem;
+}
+
+.zh3n-content {
+  max-width: 560px;
+  width: 100%;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 1.4s cubic-bezier(0.22, 1, 0.36, 1),
+              transform 1.4s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.zh3n-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.zh3n-line {
+  font-size: clamp(1.1rem, 3vw, 1.4rem);
+  font-weight: 300;
+  color: rgba(255, 255, 255, 0.55);
+  line-height: 1.75;
+  margin: 0;
+  letter-spacing: 0.2px;
+}
+
+.zh3n-line-2 {
+  margin-top: 0.6rem;
+  color: rgba(255, 255, 255, 0.3);
+  font-style: italic;
+}
+
+/* Back link */
+.zh3n-back {
+  position: fixed;
+  top: 1.5rem;
+  left: 1.5rem;
+  font-size: 0.72rem;
+  color: rgba(255, 255, 255, 0.15);
+  text-decoration: none;
+  letter-spacing: 1px;
+  font-family: 'Inter', sans-serif;
+  transition: color 0.3s;
+}
+
+.zh3n-back:hover {
+  color: rgba(255, 255, 255, 0.4);
+}
